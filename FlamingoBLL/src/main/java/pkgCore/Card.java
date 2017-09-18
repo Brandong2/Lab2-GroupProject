@@ -4,12 +4,12 @@ import pkgEnum.*;
 
 public class Card implements Comparable {
 
-	public static eRank eRank;
-	public static eSuit eSuit;
+	private eRank eRank;
+	private eSuit eSuit;
 	
-	public Card(eRank Rank, eSuit Suit) {
-		this.seteRank(Rank);
-		this.seteSuit(Suit);
+	public Card(eSuit Suit, eRank Rank) {
+		eRank = Rank;
+		eSuit = Suit;
 	}
 	
 	public eRank geteRank() {

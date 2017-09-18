@@ -9,22 +9,43 @@ public class Hand {
 	private ArrayList<Card> cards = new ArrayList<Card>();
 	
 	public Hand(){
-		this.Draw();
-		this.Draw();
+	
 	}
 	
 	public int[] ScoreHand()
 	{
 		int [] iScore = new int[2];
 		
-		iScore[0] = 5;
-		iScore[1] = 10;
+		iScore[0] = 0; //Change back to 5 if needed?
+		iScore[1] = 0; //Change back to 10 if needed?
 		
 		Collections.sort(cards);
 		
+		int oneCardRank;
 		
 		for (Card c: cards)
 		{
+			oneCardRank = c.geteRank().getiRankNbr();
+			
+			switch(oneCardRank) {
+			case 14: case 1:
+				iScore[0] += 11;
+				iScore[1] += 1;
+				break;
+			case 11: case 12: case 13:
+				oneCardRank = 10;
+			default:
+				iScore[0] += oneCardRank;
+				iScore[1] += oneCardRank;
+			}
+			
+			if (iScore[0] != iScore[1]) {
+				if(iScore[0] > 21) {
+					iScore[0] -= 10;
+				}
+			}
+				
+			
 			//	TODO: Determine the score.  
 			//			Cards:
 			//			2-3-4 - score = 11

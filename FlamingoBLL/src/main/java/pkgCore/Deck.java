@@ -14,7 +14,7 @@ public class Deck {
 			for (eSuit S : eSuit.values()) {
 				 for (eRank R : eRank.values()) {
 					 if(R != eRank.ONE) {
-						 deckOfCards.add(new Card(R,S));
+						 deckOfCards.add(new Card(S,R));
 					 }
 				 }
 			}
