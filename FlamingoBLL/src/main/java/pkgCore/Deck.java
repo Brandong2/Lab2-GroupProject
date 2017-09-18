@@ -6,7 +6,7 @@ import java.util.Collections;
 import pkgEnum.*;
 
 public class Deck {
-	public ArrayList<Card> deckOfCards;
+	private ArrayList<Card> deckOfCards;
 	
 	public Deck(int number) {
 		deckOfCards = new ArrayList<Card>(); 
@@ -21,6 +21,10 @@ public class Deck {
 		}
 		
 		Collections.shuffle(deckOfCards);
+	}
+	
+	public int size() {
+		return deckOfCards.size();
 	}
 	
 	public Card draw() {
