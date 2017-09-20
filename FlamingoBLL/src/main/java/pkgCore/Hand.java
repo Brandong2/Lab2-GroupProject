@@ -16,8 +16,8 @@ public class Hand {
 	{
 		int [] iScore = new int[2];
 		
-		iScore[0] = 0; //Change back to 5 if needed?
-		iScore[1] = 0; //Change back to 10 if needed?
+		iScore[0] = 0; 
+		iScore[1] = 0; 
 		
 		Collections.sort(cards);
 		
@@ -46,7 +46,7 @@ public class Hand {
 			}
 				
 			
-			//	TODO: Determine the score.  
+			//	TOD: Determine the score.  
 			//			Cards:
 			//			2-3-4 - score = 11
 			//			5-J-Q - score = 25
